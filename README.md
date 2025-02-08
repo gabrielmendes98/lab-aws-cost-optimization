@@ -1,41 +1,63 @@
-# RELATÓRIO DE IMPLEMENTAÇÃO DE SERVIÇOS AWS
+# 📊 AWS Services Implementation Report
 
-Data: 15/04/2024
-Empresa: Abstergo Industries
-Responsável: Gabriel Santiago
+**Date:** April 15, 2024  
+**Company:** Abstergo Industries  
+**Responsible:** Gabriel Santiago  
 
-## Introdução
+---
 
-Este relatório apresenta o processo de implementação de ferramentas na empresa Abstergo Industries, realizado por Gabriel Santiago. O objetivo do projeto foi elencar 3 serviços AWS, com a finalidade de realizar diminuição de custos imediatos.
+## 🌟 Introduction
 
-## Descrição do Projeto
+This report outlines the implementation of AWS services at the fictional company **Abstergo Industries**, led by **Gabriel Santiago**. The primary goal of this project was to identify and implement **three key AWS services** to achieve immediate cost optimization and improve operational efficiency.
 
-O projeto de implementação de ferramentas foi dividido em 3 etapas, cada uma com seus objetivos específicos. A seguir, serão descritas as etapas do projeto:
+---
 
-Etapa 1:
+## 🚀 Project Description
 
-- EC2 AutoScaling Dinamico
-- EC2 Auto Scaling ajuda a manter a disponibilidade da aplicação e permite adicionar ou remover automaticamente instâncias do EC2 usando políticas de escalabilidade. A escalabilidade dinâmica dimensiona a capacidade do seu grupo do Auto Scaling de acordo com a ocorrência de alterações no tráfego.
-- Podemos usar um autocaling dinamico em nossas instancias do EC2 de inicio para conseguirmos metricas mais robustas e depois podemos implementar um autoscaling preditivo para otimizar ainda mais os custos.
+The project was divided into **three phases**, each focusing on a specific AWS service. Below, we detail each phase, including the service description, its benefits, and the proposed cost-optimization solution.
 
-Etapa 2:
+---
 
-- Amazon ElastiCache
-- O Amazon ElastiCache é um serviço web que facilita a implantação, a operação e o dimensionamento de um armazenamento de dados ou cache na memória na nuvem. O serviço melhora a performance de aplicativos web, o que permite recuperar informações de datastores rápidos e gerenciados na memória, em vez de depender inteiramente de bancos de dados armazenados em disco e sua performance mais lenta.
-- Podemos armazenar requisicoes frequentes no Redis para evitar muitas consultas semelhantes ao banco de dados. Otimizando a quantidade de leituras no banco, otimizando o tempo de resposta e o custo de nossas requisicoes
+### **Phase 1: Dynamic EC2 Auto Scaling** ⚖️
 
-Etapa 3:
+- **Service:** EC2 Auto Scaling (Dynamic Scaling)  
+- **Description:**  
+  EC2 Auto Scaling ensures high availability for your applications by automatically adjusting the number of EC2 instances based on traffic demands. Dynamic scaling responds to real-time changes in workload, ensuring that you have the right amount of compute capacity at all times.  
+- **Cost-Optimization Solution:**  
+  Implement **dynamic scaling** initially to gather robust metrics on usage patterns. Once sufficient data is collected, transition to **predictive scaling** to further optimize costs. Predictive scaling uses machine learning to forecast traffic and scale resources proactively, reducing the need for over-provisioning and minimizing idle resources.  
 
-- AWS Instance Scheduler
-- A solução Programador de Instâncias da AWS automatiza o início e a interrupção de instâncias do Amazon Elastic Compute Cloud (Amazon EC2) e do Amazon Relational Database Service (Amazon RDS). Essa solução ajuda a reduzir os custos operacionais interrompendo os recursos que não estiverem em uso e iniciando-os quando forem necessários. A economia pode ser significativa se você deixar todas as suas instâncias funcionando com total utilização continuamente.
-- Podemos usar essa solucao para parar e iniciar nossas instancias do ambiente de QA, Staging, etc. nos horarios em que nao estiverem em uso, pois nao teria um funcionario trabalhando. Ex: desligar todos os dias as 19h e iniciar novamente 8h.
+---
 
-## Conclusão
+### **Phase 2: Amazon ElastiCache** 🚀
 
-A implementação de ferramentas na empresa _Abstergo Industries tem como esperado reducao de custos de infraestrutura_, o que aumentará o lucro da empresa. Recomenda-se a continuidade da utilização das ferramentas implementadas e a busca por novas tecnologias que possam melhorar ainda mais os processos da empresa.
+- **Service:** Amazon ElastiCache  
+- **Description:**  
+  Amazon ElastiCache is a fully managed in-memory data store and caching service that improves application performance by reducing the load on primary databases. It supports popular engines like **Redis** and **Memcached**, enabling faster data retrieval and reducing latency for frequently accessed data.  
+- **Cost-Optimization Solution:**  
+  Use **Redis** to cache frequently requested data, reducing the number of repetitive queries to the primary database. This approach not only **lowers database read costs** but also improves response times, leading to a more efficient and cost-effective architecture.  
 
-## Anexos
+---
 
-Assinatura do Responsável pelo Projeto:
+### **Phase 3: AWS Instance Scheduler** ⏰
 
-Gabriel Santiago
+- **Service:** AWS Instance Scheduler  
+- **Description:**  
+  The AWS Instance Scheduler automates the start and stop of Amazon EC2 and Amazon RDS instances. By scheduling instances to run only during required hours, this solution significantly reduces operational costs, especially for non-production environments like QA and staging.  
+- **Cost-Optimization Solution:**  
+  Implement the Instance Scheduler to **automatically stop QA and staging environments** outside working hours (e.g., shutting down at 7 PM and restarting at 8 AM). This ensures that resources are only active when needed, leading to substantial cost savings without impacting productivity.  
+
+---
+
+## 🎯 Conclusion
+
+The implementation of these AWS services at **Abstergo Industries** is expected to deliver **immediate cost reductions** and **improved operational efficiency**. By leveraging dynamic scaling, in-memory caching, and instance scheduling, the company can optimize its cloud infrastructure while maintaining high performance and availability.  
+
+We recommend **continuous monitoring** of these services and exploring additional AWS tools to further enhance cost efficiency and scalability.  
+
+---
+
+## 📝 Attachments
+
+**Signed by:**  
+Gabriel Santiago  
+Project Lead  
